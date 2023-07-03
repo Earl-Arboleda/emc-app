@@ -2,37 +2,264 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button-holder{
+  
+  margin-top: 60px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content .button-holder button{
+  width: 200px;
+  height: 40px;
+  margin: 0px 80px;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display{
+  position: relative;
+}
+
+
+.disp{
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  height: 900px;
+  width: 1440px;
+}
+
+#available, #avail{
+  background-color: #7DF10E;
+}
+
+#reserved, #res{
+  background-color: #0EEFF1;
+}
+
+#borrowed, #bor{
+  background-color: #820EF1;
+}
+
+#history, #his{
+  background-color: #F1100E;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.button-holder {
+  margin-bottom: 20px;
+}
+
+
+.disp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.disp.active {
+  display: block;
+}
+
+#available {
+  background-color: lightblue;
+  z-index: 4;
+}
+
+#reserved {
+  background-color: lightgreen;
+  z-index: 3;
+}
+
+#borrowed {
+  background-color: lightyellow;
+  z-index: 2;
+}
+
+#history {
+  background-color: lightpink;
+  z-index: 1;
+}
+
+/* Sidebar */
+.sidebar-content {
+  padding: 20px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-card{
+  width: auto;
+  height: auto;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(40, 33, 33);
+  margin: 50px 80px;
+  /* Add any additional styling for the avatar */
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  /* Add any additional styling for the username */
+}
+
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  /* Add any additional styling for the buttons */
+}
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon.collapsed {
+  transform: rotate(180deg);
 }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background-color: lightblue;
+  transition: transform 0.3s ease-in-out;
+  z-index: 998;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.card-details {
+  /* Add any additional styling for the card details container */
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  /* Add any additional styling for the username */
+}
+
+
+/* add object */
+/* /* add object / */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+}
+/* Pop up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pop up */
+
+/* add object */
